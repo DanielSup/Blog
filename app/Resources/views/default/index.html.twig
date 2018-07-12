@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <nav>
+        <ul class="main-menu">
+            <li>Seznam článků (Domovská stránka)</li>
+            <li><a href="{{ path("contact") }}">Kontakt</a></li>
+        </ul>
+        <ul class="tiny-navigation">
+            <li>Domovská stránka</li>
+        </ul>
+    </nav>
+    <h1>Naposledy přidané články</h1>
+    <p>Níže se nachází seznam naposledy vydaných článků. U každého článku se nachází úvodní fotografie, název, perex a odkaz na stránku s detailem článku.</p>
+    <ul id="article-list" class="articles">
+        {% for article in articles %}
+            <li>
+                <div class="article-view">
+                    <h2>{{ article.title }}</h2>
+                    <img class="thumbnail" src="{{ article.photo }}" alt="{{ article.title }} ilustration photo" />
+                    <p>{{ article.perex }}</p>
+                </div>
+                <a href="{{ path("article", {"id" : article.id}) }}" class="read-article">Přečíst článek</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <button onclick="loadArticles('{{ path("homepage") }}')" id="load-articles">Načíst další články</button>
+{% endblock %}
+

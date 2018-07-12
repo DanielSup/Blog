@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <nav>
+        <ul class="main-menu">
+            <li><a href="{{ path("homepage") }}">Seznam článků (Domovská stránka)</a></li>
+            <li>Kontakt</li>
+        </ul>
+        <ul class="tiny-navigation">
+            <li><a href="{{ path("homepage") }}">Seznam článků (Domovská stránka)</a></li>
+            <li>Kontakt</li>
+        </ul>
+    </nav>
+    <h1>Kontakt</h1>
+    <p>Můžete nás kontaktovat na e-mailové adrese <a href="mailto:info@primat.cz">info@primat.cz</a></p>
+{% endblock %}
+
