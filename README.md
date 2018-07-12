@@ -1,6 +1,6 @@
 Instalace aplikace
 ========================
-Pro spouštění aplikace použijeme lokální server lampp nebo xampp. Nejdříve je potřeba zkopírovat složku blog do složky htdocs.
+Pro spouštění aplikace použijeme lokální server lampp nebo xampp. Nejdříve je potřeba vytvořit složku blog a naklonovat si obsah repozitáře https://github.com/DanielSup/Blog.git.
 
 Následně je potřeba vytvořit databázi s názvem articles v rozhraní phpmyadmin, které lze spustit na adrese localhost:8080/phpmyadmin
 
